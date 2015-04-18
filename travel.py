@@ -15,10 +15,6 @@ best = 0
 size = 0
 bVisited = 0
 
-
-
-
-
 '''função recursiva'''
 def func(current_cost,current_city,visited):
 	global cities, current_solution,best,size,dest_city,start_city,bVisited
@@ -85,8 +81,8 @@ def doIt(file_name):
 					cities[i][1].append([j-1,float(line[j])])
 
 	'''ordenamos o array dos custos para outras cidades de cada cidade, por ordem crescente'''
-	'''for city in cities:
-		city[1].sort(key=lambda x: x[1], reverse=False)'''
+	for city in cities:
+		city[1].sort(key=lambda x: x[1], reverse=False)
 
 	size = len(cities)
 
